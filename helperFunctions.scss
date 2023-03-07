@@ -10,3 +10,10 @@
     height: $height;
     width: $width;
 }
+@mixin planetAttributes(){
+    display: inline-block;
+    content: "";
+    position: absolute;
+    background: #9c9999;
+    border-radius: 50%;
+}

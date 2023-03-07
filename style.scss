@@ -10,6 +10,7 @@ $spaceColor : #000;
 body{
    @include felxCenter(100vh,100vw);
    background-color: $spaceColor;
+   overflow: hidden;
 }
 
 span{
@@ -30,6 +31,7 @@ span{
     z-index: 999;
 }
 .planet{
+    position: absolute;
     background:transparent;
     border: 4px solid rgba($color: rgb(255,255,255), $alpha: 0.5);
     animation: rotatePlanets 10s linear infinite;
@@ -40,21 +42,26 @@ span{
 .planet2{
     @include setHeight(170px,170px);
 }
-.planet4{
+
+.planet3{
     @include setHeight(230px,230px);
 }
-.planet5{
+.planet4{
     @include setHeight(300px,300px);
 }
-.planet6{
+.planet5{
     @include setHeight(400px,400px);
 }
-.planet7{
+.planet6{
     @include setHeight(480px,480px);
 }
-.planet8{
-    @include setHeight(530px,530px);
+.planet7{
+    @include setHeight(540px,540px);
 }
+.planet8{
+    @include setHeight(620px,620px);
+}
+
 
 .span::before , span::after{
     content: "";
@@ -63,10 +70,74 @@ span{
     border-radius: 50%;
 }
 .planet1::before{
-    content: "hiiiiiiii";
-    height: 20px;
-    width: 20px;
+    @include planetAttributes;
+    @include setHeight(20px,20px);
     bottom: 6px;
     left: 2px;
-    background: #979797;
+    background: #9c9999;
+}
+.planet2::before{
+    @include planetAttributes;
+    @include setHeight(25px,25px);
+    bottom: 120px;
+    left: 2px;
+    background: #5f98e2;
+}
+.planet3::before{
+    @include planetAttributes;
+    @include setHeight(30px,30px);
+    bottom: 120px;
+    right: -12px;
+    background: #227c4f;
+}
+.planet4::before{
+    @include planetAttributes;
+    @include setHeight(20px,20px);
+    bottom: 40px;
+    right: 25px;
+    background: #d65b5b;
+}
+.planet5::before{
+    @include planetAttributes;
+    @include setHeight(40px,40px);
+    left: 280px;
+    top: 10px;
+    background: #ca8353;
+}
+.planet6::before{
+    @include planetAttributes;
+    @include setHeight(32px,32px);
+    left: -5px;
+    top: 300px;
+    background: #beaf24;
+}
+.planet6::after{
+    @include planetAttributes;
+    @include setHeight(10px,50px);
+    left: -13px;
+    top: 310px;
+    background: #beaf24;
+}
+.planet7::before{
+    @include planetAttributes;
+    @include setHeight(32px,32px);
+    left: 95px;
+    top: 30px;
+    background: #052f35;
+}
+.planet8::before{
+    @include planetAttributes;
+    @include setHeight(25px,25px);
+    left: 130px;
+    bottom: 30px;
+    background: #3d2c64;
+}
+
+@keyframes rotatePlanets {
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
 }

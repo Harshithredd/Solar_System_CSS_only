@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000;
+  overflow: hidden;
 }
 
 span {
@@ -31,6 +32,7 @@ span {
 }
 
 .planet {
+  position: absolute;
   background: transparent;
   border: 4px solid rgba(255, 255, 255, 0.5);
   animation: rotatePlanets 10s linear infinite;
@@ -46,29 +48,34 @@ span {
   width: 170px;
 }
 
-.planet4 {
+.planet3 {
   height: 230px;
   width: 230px;
 }
 
-.planet5 {
+.planet4 {
   height: 300px;
   width: 300px;
 }
 
-.planet6 {
+.planet5 {
   height: 400px;
   width: 400px;
 }
 
-.planet7 {
+.planet6 {
   height: 480px;
   width: 480px;
 }
 
+.planet7 {
+  height: 540px;
+  width: 540px;
+}
+
 .planet8 {
-  height: 530px;
-  width: 530px;
+  height: 620px;
+  width: 620px;
 }
 
 .span::before, span::after {
@@ -79,10 +86,127 @@ span {
 }
 
 .planet1::before {
-  content: "hiiiiiiii";
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
   height: 20px;
   width: 20px;
   bottom: 6px;
   left: 2px;
-  background: #979797;
+  background: #9c9999;
+}
+
+.planet2::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  bottom: 120px;
+  left: 2px;
+  background: #5f98e2;
+}
+
+.planet3::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  bottom: 120px;
+  right: -12px;
+  background: #227c4f;
+}
+
+.planet4::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  bottom: 40px;
+  right: 25px;
+  background: #d65b5b;
+}
+
+.planet5::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  left: 280px;
+  top: 10px;
+  background: #ca8353;
+}
+
+.planet6::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  left: -5px;
+  top: 300px;
+  background: #beaf24;
+}
+
+.planet6::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 10px;
+  width: 50px;
+  left: -13px;
+  top: 310px;
+  background: #beaf24;
+}
+
+.planet7::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  left: 95px;
+  top: 30px;
+  background: #052f35;
+}
+
+.planet8::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background: #9c9999;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  left: 130px;
+  bottom: 30px;
+  background: #3d2c64;
+}
+
+@keyframes rotatePlanets {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
