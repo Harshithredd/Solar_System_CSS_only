@@ -1,0 +1,12 @@
+@mixin felxCenter($height,$width){
+    height: $height;
+    width: $width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin setHeight($height,$width){
+    height: $height;
+    width: $width;
+}

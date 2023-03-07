@@ -1,0 +1,72 @@
+@import './helperFunctions';
+
+$spaceColor : #000;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   @include felxCenter(100vh,100vw);
+   background-color: $spaceColor;
+}
+
+span{
+    position: absolute ;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.sun{
+    @include setHeight(60px,60px);
+    background: #ff8b17;
+    box-shadow: 0 0 10px  #ff8b17,
+    0 0 20px  #ff8b17,
+    0 0 30px  #ff8b17,
+    0 0 40px  #ff8b17;
+    z-index: 999;
+}
+.planet{
+    background:transparent;
+    border: 4px solid rgba($color: rgb(255,255,255), $alpha: 0.5);
+    animation: rotatePlanets 10s linear infinite;
+}
+.planet1{
+    @include setHeight(110px,110px);
+}
+.planet2{
+    @include setHeight(170px,170px);
+}
+.planet4{
+    @include setHeight(230px,230px);
+}
+.planet5{
+    @include setHeight(300px,300px);
+}
+.planet6{
+    @include setHeight(400px,400px);
+}
+.planet7{
+    @include setHeight(480px,480px);
+}
+.planet8{
+    @include setHeight(530px,530px);
+}
+
+.span::before , span::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+.planet1::before{
+    content: "hiiiiiiii";
+    height: 20px;
+    width: 20px;
+    bottom: 6px;
+    left: 2px;
+    background: #979797;
+}
